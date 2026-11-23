@@ -1,0 +1,43 @@
+{
+  "_note": "Starter wording only. It must be reviewed by the practice (and ideally a professional adviser) before publication. Items in [square brackets] are placeholders.",
+  "pages": {
+    "privacy-notice": {
+      "title": "Privacy notice",
+      "updated": "[Date]",
+      "sections": [
+        { "heading": "Who we are", "body": ["Psych-Therapies is the data controller for the personal information described in this notice. [Trading name / company name and registered address]. ICO registration number: [ICO registration number]."] },
+        { "heading": "What we collect through this website", "body": ["When you send an enquiry, we collect your name, your email address or phone number, the psychologist you'd like to see and any message you choose to include.", "This website does not use cookies for tracking or advertising, and we do not use analytics that identify you."] },
+        { "heading": "Why we use it and our lawful basis", "body": ["We use your details only to respond to your enquiry and arrange an assessment. Our lawful basis is your consent and the steps needed before entering into a contract with you (UK GDPR Article 6(1)(a) and (b)).", "If you share information about your health, we process it with your explicit consent and for the provision of health care (UK GDPR Article 9(2)(a) and (h))."] },
+        { "heading": "How long we keep it", "body": ["If you don't go on to have therapy with us, we delete enquiry details within [12 months]. Clinical records are kept in line with professional guidance and are covered by a separate notice given at assessment."] },
+        { "heading": "Who we share it with", "body": ["Enquiries are delivered to our practice email account, provided by Google. We do not sell your data or share it for marketing."] },
+        { "heading": "Your rights", "body": ["You have the right to access, correct or delete your information, to restrict or object to its use and to withdraw consent at any time. Email us to make a request.", "If you are unhappy with how we have handled your data, you can complain to the Information Commissioner's Office (ICO) at ico.org.uk or on 0303 123 1113."] }
+      ]
+    },
+    "complaints": {
+      "title": "Complaints",
+      "updated": "[Date]",
+      "sections": [
+        { "heading": "Talking to us first", "body": ["We want everyone to feel safe and respected. If you're unhappy with any part of our service, please tell your psychologist or email us. We will acknowledge your complaint within [5 working days] and aim to respond fully within [20 working days]."] },
+        { "heading": "If you're still not satisfied", "body": ["Our psychologists are registered with the Health and Care Professions Council (HCPC). You can raise a concern about a registered professional's fitness to practise with the HCPC at hcpc-uk.org.", "If you accessed therapy through your health insurer, you can also contact your insurer."] }
+      ]
+    },
+    "accessibility-statement": {
+      "title": "Accessibility statement",
+      "updated": "[Date]",
+      "sections": [
+        { "heading": "Our aim", "body": ["We want as many people as possible to be able to use this website. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA."] },
+        { "heading": "What you can do", "body": ["Navigate the whole site using a keyboard; use a screen reader; pause all animation using the pause button in the header; and turn off motion by enabling 'reduce motion' in your device settings.", "Each section can be reached with the numbered buttons on the right of the screen or the links in the header."] },
+        { "heading": "Feedback", "body": ["If you find something difficult to use, please email us and we'll do our best to help and to fix the problem."] }
+      ]
+    },
+    "terms-and-conditions": {
+      "title": "Terms and conditions",
+      "updated": "[Date]",
+      "sections": [
+        { "heading": "About this website", "body": ["The information on this website is general and is not a substitute for individual assessment or advice. It is not suitable for emergencies."] },
+        { "heading": "Appointments and fees", "body": ["Fees are confirmed before your first appointment. Please give at least 24 hours' notice if you need to cancel or rearrange. Missed appointments without notice are charged at the full rate."] },
+        { "heading": "Confidentiality", "body": ["What you share in therapy is confidential. There are rare exceptions, for example if we believe you or someone else is at serious risk of harm. Your psychologist will explain these at your first appointment."] }
+      ]
+    }
+  }
+}

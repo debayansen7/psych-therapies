@@ -1,0 +1,47 @@
+.rail {
+  position: absolute;
+  z-index: 40;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--pt-border);
+  box-shadow: 0 8px 24px rgba(43, 34, 48, 0.08);
+}
+
+.num {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--pt-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.num:hover {
+  background: var(--pt-pink-soft);
+}
+.num[aria-current="step"] {
+  background: var(--pt-rose);
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .rail {
+    right: 8px;
+  }
+}

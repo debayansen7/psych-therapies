@@ -1,0 +1,186 @@
+/* Overrides on anexui's Modal (size="full"). */
+.modal {
+  border-radius: 32px !important;
+  max-width: min(1180px, calc(100vw - 48px)) !important;
+  max-height: calc(100dvh - 48px) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.modal > div {
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.modal > div::-webkit-scrollbar {
+  display: none;
+}
+
+.grid {
+  display: flex;
+  gap: 32px;
+}
+
+.photoCol {
+  flex: 0 0 40%;
+  min-width: 0;
+}
+.photo {
+  position: sticky;
+  top: 0;
+  height: min(640px, calc(100dvh - 160px));
+  border-radius: 24px;
+  overflow: hidden;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.role {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 28px 24px 22px;
+  background: linear-gradient(transparent, rgba(43, 34, 48, 0.78));
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.hcpc {
+  display: block;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-weight: 400;
+  color: #fde8ee;
+}
+
+.body {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-bottom: 12px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li {
+  background: var(--pt-pink);
+  color: var(--pt-rose-deep);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pt-rose);
+  font-weight: 600;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--pt-ink-soft);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--pt-ink-soft);
+}
+
+.quote {
+  margin: 0;
+  background: #fff4f6;
+  border-radius: 22px;
+  padding: 24px 26px;
+}
+.quote blockquote {
+  margin: 0;
+}
+.quote p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.quote figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--pt-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pill {
+  border-radius: 999px !important;
+}
+
+@media (max-width: 760px) {
+  .modal {
+    max-width: 100vw !important;
+    max-height: 100dvh !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+  }
+  .modal > div {
+    max-height: 100dvh;
+  }
+  .grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .photoCol {
+    flex: none;
+  }
+  .photo {
+    position: relative;
+    height: 340px;
+  }
+  .lead {
+    font-size: 20px;
+  }
+}
+
+/* anexui's full-size Modal keeps display:flex when closed; make sure a closed dialog takes no space or input. */
+.modal:not([open]) {
+  display: none !important;
+}

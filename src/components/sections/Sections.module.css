@@ -1,0 +1,350 @@
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pt-rose);
+  font-weight: 600;
+}
+
+.title {
+  margin: 10px 0 28px;
+  font-size: 46px;
+  line-height: 1.08;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+.title strong {
+  font-weight: 600;
+}
+
+.lead {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--pt-muted);
+}
+
+/* Parallax helper: --shift is set inline; --i comes from the panel. */
+.parallax {
+  transform: translateX(calc((var(--i) - var(--p)) * var(--shift, 60px) * var(--parallax)));
+}
+
+.card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--pt-shadow);
+}
+
+/* How it works ------------------------------------------------------- */
+.howGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+.howIntro {
+  flex: 1 1 380px;
+}
+.howTitle {
+  margin: 14px 0 20px;
+  font-size: 54px;
+  line-height: 1.06;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+.howTitle strong {
+  font-weight: 600;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 32px 0 0;
+}
+.statValue {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--pt-rose);
+  line-height: 1;
+}
+.statLabel {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--pt-muted);
+}
+.steps {
+  flex: 1 1 420px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px 22px;
+}
+.stepNum {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+.stepTitle {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+.stepText {
+  margin: 4px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pt-muted);
+}
+
+/* Team ---------------------------------------------------------------- */
+.teamHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+.teamHead .title {
+  margin-bottom: 0;
+}
+.teamGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.docCard {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  border: 0;
+  padding: 12px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(178, 58, 94, 0.1);
+  transition: box-shadow 0.3s;
+}
+.docCard:hover {
+  box-shadow: 0 18px 50px rgba(178, 58, 94, 0.18);
+}
+.docPhoto {
+  height: clamp(200px, calc(100dvh - 430px), 420px);
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--pt-pink-soft);
+}
+.docPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.docCard:hover .docPhoto img {
+  transform: scale(1.05);
+}
+.docBody {
+  padding: 18px 6px 6px;
+}
+.docName {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.docFocus {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--pt-rose);
+  font-weight: 600;
+}
+.docMore {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--pt-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Help ---------------------------------------------------------------- */
+.helpGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.helpTitle {
+  margin: 0 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.helpItems {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--pt-muted);
+}
+.approaches {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.approach {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Stories --------------------------------------------------------------- */
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.story {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+}
+.storyQuote {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  flex-grow: 1;
+}
+.storyBy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--pt-muted);
+}
+.storyBy img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.storyBy strong {
+  color: var(--pt-ink);
+  font-weight: 600;
+}
+.disclaimer {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--pt-muted);
+}
+
+/* Start --------------------------------------------------------------- */
+.startGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.startInfo {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.facts {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--pt-muted);
+}
+.facts dt {
+  display: inline;
+  color: var(--pt-ink);
+  font-weight: 600;
+}
+.facts dd {
+  display: inline;
+  margin: 0;
+}
+.facts div + div {
+  margin-top: 2px;
+}
+.crisis {
+  background: #fff;
+  border: 1px solid var(--pt-pink-line);
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--pt-ink-soft);
+}
+.crisis strong {
+  display: block;
+  color: var(--pt-ink);
+  margin-bottom: 4px;
+}
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .title,
+  .howTitle {
+    font-size: 34px;
+  }
+  .teamGrid {
+    gap: 12px;
+  }
+  .docPhoto {
+    height: clamp(160px, 30dvh, 340px);
+  }
+}
+
+@media (max-width: 760px) {
+  .title,
+  .howTitle {
+    font-size: 28px;
+  }
+  .teamGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .docPhoto {
+    height: 260px;
+  }
+  .statValue {
+    font-size: 34px;
+  }
+}

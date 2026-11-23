@@ -1,0 +1,285 @@
+.hero {
+  width: 100%;
+}
+
+.intro {
+  text-align: center;
+  animation: pt-fade-up 0.9s ease both 0.2s;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pt-rose);
+  font-weight: 600;
+}
+
+.title {
+  margin: 12px auto 0;
+  max-width: 820px;
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+.title strong {
+  font-weight: 600;
+}
+
+.ring {
+  position: relative;
+  max-width: 1240px;
+  height: calc(100dvh - 290px);
+  min-height: 420px;
+  margin: 10px auto 0;
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.line,
+.lineActive {
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: pt-draw 0.7s ease forwards var(--delay);
+  transition: stroke 0.25s;
+}
+.line {
+  stroke: #edb5c5;
+  stroke-width: 1.2;
+}
+.lineActive {
+  stroke: var(--pt-rose);
+  stroke-width: 2;
+}
+
+.brainWrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(420px, 50dvh);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s, filter 0.3s;
+}
+.brainDim {
+  opacity: 0.25;
+  filter: blur(2px);
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chip {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  animation: pt-pop 0.6s cubic-bezier(0.2, 0.9, 0.25, 1.25) both var(--delay),
+    pt-bob var(--bob) ease-in-out calc(var(--delay) + 0.6s) infinite;
+}
+
+.chipButton {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 11px 20px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--pt-pink-line);
+  background: #fff;
+  color: var(--pt-ink);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(178, 58, 94, 0.08);
+  transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.chipButton:hover {
+  border-color: var(--pt-rose);
+}
+.chipButton[aria-expanded="true"] {
+  background: var(--pt-rose);
+  border-color: var(--pt-rose);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(178, 58, 94, 0.35);
+}
+
+.cardSlot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  width: 0;
+  height: 0;
+}
+
+.card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 380px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--pt-pink-line);
+  border-radius: 24px;
+  padding: 24px 26px;
+  box-shadow: 0 20px 50px rgba(178, 58, 94, 0.16);
+  animation: pt-card-in 0.28s ease both;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  margin: 12px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pt-rose);
+  font-weight: 600;
+}
+.kickerGreen {
+  color: var(--pt-green-text);
+}
+
+.cardText {
+  margin: 6px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pt-ink-soft);
+}
+
+.cardButton {
+  margin-top: 16px;
+  border-radius: 999px !important;
+}
+
+.hint {
+  margin: 6px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--pt-muted);
+  animation: pt-fade-up 0.8s ease both 3.4s;
+}
+
+.sheet {
+  padding-bottom: 8px;
+}
+.sheet .cardText {
+  font-size: 16px;
+}
+.sheetButton {
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 999px !important;
+}
+
+@media (max-width: 1100px) {
+  .title {
+    font-size: 32px;
+  }
+  .ring {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 28px;
+  }
+  .ring {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .lines {
+    display: none;
+  }
+  .brainWrap {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: min(250px, 64vw);
+  }
+  .chips {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .chip {
+    position: static;
+    transform: none;
+    animation: pt-fade-up 0.5s both var(--delay);
+  }
+  .chipButton {
+    width: 100%;
+    white-space: normal;
+    font-size: 15px;
+    padding: 12px 10px;
+  }
+}
+
+/* Keyframes are local to this module (CSS Modules scope animation names). */
+@keyframes pt-bob {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% - 8px));
+  }
+}
+@keyframes pt-card-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes pt-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes pt-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pt-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

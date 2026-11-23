@@ -1,0 +1,106 @@
+{
+  "_note": "Items in [square brackets] are placeholders that must be confirmed with the practice before launch.",
+  "practice": {
+    "name": "Psych-Therapies",
+    "description": "Clinical psychologists offering assessment and therapy for children, young people, adults and older adults in Loughborough, Nottingham and online.",
+    "email": "psychtherapies1@gmail.com",
+    "phone": "[Phone number]",
+    "places": "Loughborough, Nottingham, and by video or telephone",
+    "addresses": ["[Loughborough address]", "[Nottingham address]"],
+    "registration": "All our psychologists are registered with the Health and Care Professions Council (HCPC) and are members of the British Psychological Society (BPS).",
+    "icoNumber": "[ICO registration number]",
+    "businessDetails": "[Trading name / company name and registered address]",
+    "insurers": ["AXA", "Aviva", "Bupa", "Vitality", "WPA", "WTW"],
+    "fees": [
+      { "label": "Initial assessment (up to 60 minutes)", "price": "[£ fee]" },
+      { "label": "Therapy session", "price": "[£ fee]" },
+      { "label": "Adult ADHD assessment", "price": "[£ fee]" }
+    ],
+    "cancellation": "Please give at least 24 hours' notice if you need to cancel or rearrange. Missed appointments without notice are charged at the full rate."
+  },
+  "crisis": {
+    "title": "Need help now?",
+    "text": "We are not an emergency service and cannot respond to urgent messages. If you are in crisis or worried about your safety, please call 999 or go to A&E. For urgent mental health support, call NHS 111 and choose the mental health option, or call Samaritans free on 116 123, day or night."
+  },
+  "sections": [
+    { "id": "home", "label": "Home" },
+    { "id": "how", "label": "How it works" },
+    { "id": "team", "label": "Psychologists" },
+    { "id": "help", "label": "What we help with" },
+    { "id": "stories", "label": "Client stories" },
+    { "id": "start", "label": "Get started" }
+  ],
+  "hero": {
+    "eyebrow": "Clinical psychologists · Loughborough · Nottingham · Online",
+    "titleLight": "Every mind struggles sometimes.",
+    "titleBold": "Let's understand yours.",
+    "hint": "Hover over or select a word to learn what it is and what can help · Scroll sideways to explore"
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "titleLight": "Change is possible.",
+    "titleBold": "It starts with one conversation.",
+    "intro": "A warm, non-judgemental space to talk, and evidence-based therapy to help you move towards a more meaningful life.",
+    "stats": [
+      { "value": "1–2 weeks", "label": "usual wait for a first assessment" },
+      { "value": "60 min", "label": "unhurried first session" }
+    ],
+    "steps": [
+      { "title": "Send a confidential enquiry", "text": "You can refer yourself. You don't need a referral from your GP." },
+      { "title": "We arrange your assessment", "text": "Up to 60 minutes, in person or by video or telephone. A family member, partner or carer can join if you wish." },
+      { "title": "A plan made together", "text": "We agree the approach and an estimated number of sessions, and review progress as we go." }
+    ]
+  },
+  "teamSection": {
+    "eyebrow": "Our psychologists",
+    "titleLight": "Three psychologists.",
+    "titleBold": "One warm practice.",
+    "hint": "Select a psychologist to read their full profile"
+  },
+  "help": {
+    "eyebrow": "What we help with",
+    "titleLight": "For children, adults, couples, families",
+    "titleBold": "and older adults.",
+    "groups": [
+      { "title": "Everyday mental health", "items": "Anxiety · depression · stress · anger · phobias · OCD · sleep · self-esteem · grief" },
+      { "title": "Trauma and complex needs", "items": "PTSD · past or recent abuse · psychosis · personality difficulties · substance use" },
+      { "title": "Physical health", "items": "Adjusting to a diagnosis · pain · body image · cancer, diabetes and HIV" },
+      { "title": "Assessments", "items": "Adult ADHD · memory, attention and processing · children's behaviour" }
+    ],
+    "approaches": ["CBT", "EMDR", "ACT", "DBT", "Schema therapy", "CAT", "IPT", "Psychodynamic", "Person-centred", "Solution-focused", "Prolonged exposure"]
+  },
+  "stories": {
+    "eyebrow": "Client stories",
+    "titleLight": "In their",
+    "titleBold": "own words.",
+    "disclaimer": "Shared with permission. Everyone's experience of therapy is different."
+  },
+  "start": {
+    "eyebrow": "Get started",
+    "titleLight": "Whenever you're",
+    "titleBold": "ready.",
+    "form": {
+      "name": "Your name",
+      "contact": "Email address or phone number",
+      "who": "Who would you like to see?",
+      "whoDefault": "Match me with the most suitable psychologist",
+      "message": "Anything you'd like us to know (optional)",
+      "messageHelp": "Please don't include detailed personal or medical information here. We'll talk about this properly at your assessment.",
+      "consent": "I agree to Psych-Therapies using these details to respond to my enquiry, as described in the privacy notice.",
+      "submit": "Send enquiry",
+      "sending": "Sending…",
+      "success": "Thank you. Your enquiry has been sent and we'll be in touch, usually within two working days.",
+      "error": "Sorry, something went wrong. Please try again or email us directly.",
+      "required": "This field is required.",
+      "consentRequired": "Please confirm you're happy for us to contact you."
+    }
+  },
+  "footer": {
+    "links": [
+      { "href": "/privacy-notice/", "label": "Privacy notice" },
+      { "href": "/complaints/", "label": "Complaints" },
+      { "href": "/accessibility-statement/", "label": "Accessibility" },
+      { "href": "/terms-and-conditions/", "label": "Terms and conditions" }
+    ]
+  }
+}

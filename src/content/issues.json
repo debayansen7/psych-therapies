@@ -1,0 +1,65 @@
+{
+  "_note": "General information only. All wording must be reviewed and approved by the psychologists before publication (HCPC Standards of conduct, performance and ethics; ASA CAP Code section 12).",
+  "issues": [
+    {
+      "id": "depression",
+      "label": "Depression",
+      "what": "More than feeling sad: a persistently low mood, loss of interest and drained energy that lasts for weeks and can colour everything.",
+      "help": "NICE recommends talking therapies such as CBT and behavioural activation. Speaking to someone early can make a real difference."
+    },
+    {
+      "id": "anxiety",
+      "label": "Anxiety",
+      "what": "Worry or fear that feels out of proportion and hard to switch off, often with a racing heart, tension or poor sleep.",
+      "help": "CBT, which NICE recommends for anxiety, helps you understand and loosen the cycle of worry and avoidance."
+    },
+    {
+      "id": "trauma",
+      "label": "Trauma & PTSD",
+      "what": "After a frightening or distressing event, memories can return as flashbacks or nightmares, or leave you feeling constantly on edge.",
+      "help": "NICE recommends trauma-focused CBT and EMDR. Our psychologists are trained in EMDR."
+    },
+    {
+      "id": "ocd",
+      "label": "OCD",
+      "what": "Unwanted, intrusive thoughts, and the urges, checks or rituals used to try to make the anxiety go away.",
+      "help": "NICE recommends CBT that includes exposure and response prevention (ERP)."
+    },
+    {
+      "id": "adhd",
+      "label": "ADHD",
+      "what": "Lifelong differences in attention, focus, restlessness and organisation that are often missed until adulthood.",
+      "help": "A thorough adult ADHD assessment can bring clarity, followed by practical strategies that suit how your mind works."
+    },
+    {
+      "id": "stress",
+      "label": "Stress & burnout",
+      "what": "When demands outweigh your resources for too long: exhaustion, irritability and feeling detached from work or life.",
+      "help": "Together we look at the pressures, boundaries and patterns that keep you running on empty, and how to recover."
+    },
+    {
+      "id": "grief",
+      "label": "Grief & loss",
+      "what": "A natural response to losing someone or something important, but it can become stuck, overwhelming or isolating.",
+      "help": "A safe space to make sense of the loss and find a way to carry it as you go on living."
+    },
+    {
+      "id": "sleep",
+      "label": "Sleep problems",
+      "what": "Trouble falling or staying asleep that leaves your days foggy and everything harder to cope with.",
+      "help": "Structured CBT-based approaches for insomnia (CBT-I) are recommended in NICE guidance."
+    },
+    {
+      "id": "self-esteem",
+      "label": "Low self-esteem",
+      "what": "A harsh inner critic and a deep, persistent sense of not being good enough.",
+      "help": "Approaches such as CBT and schema therapy help you notice and question long-held beliefs about yourself."
+    },
+    {
+      "id": "phobias",
+      "label": "Phobias",
+      "what": "An intense fear of a specific thing or situation, strong enough that you go out of your way to avoid it.",
+      "help": "Gradual, supported exposure, at a pace you agree with your psychologist, is a well-established approach."
+    }
+  ]
+}

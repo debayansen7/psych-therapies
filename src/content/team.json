@@ -1,0 +1,93 @@
+{
+  "_note": "Bios and testimonials are taken from the practice's current website. HCPC registration numbers must be added and verified on the HCPC register (https://www.hcpc-uk.org/check-the-register/) before launch.",
+  "team": [
+    {
+      "id": "sheena-parmar",
+      "firstName": "Sheena",
+      "name": "Dr Sheena Parmar",
+      "title": "Clinical Psychologist",
+      "hcpcNumber": "PYL[000000]",
+      "image": {
+        "src": "/images/team/dr-sheena-parmar-clinical-psychologist.webp",
+        "thumbnail": "/images/team/dr-sheena-parmar-clinical-psychologist-thumbnail.webp",
+        "alt": "Dr Sheena Parmar, Clinical Psychologist, smiling and seated on a sofa",
+        "width": 900,
+        "height": 1100
+      },
+      "focus": "EMDR accredited · 15+ years in the NHS",
+      "lead": "A safe, compassionate, non-judgemental space where you can build insight, feel empowered and make meaningful change.",
+      "tags": ["EMDR accredited", "Couples", "Adult ADHD", "15+ years' experience"],
+      "about": "Sheena is a highly experienced Clinical Psychologist with over 15 years supporting people with a wide range of mental health and wellbeing difficulties. Her background is primarily within the NHS, where she developed expertise in complex mental and physical health conditions. She now works full-time in private practice, offering evidence-based, tailored support, and also enjoys working with teams and organisations.",
+      "qualifications": ["Doctorate in Clinical Psychology", "BSc (Hons) Psychology", "EMDR-accredited practitioner"],
+      "specialisms": ["Complex mental and physical health", "Trauma (EMDR)", "Anxiety and confidence"],
+      "offers": ["Individual therapy", "Couples therapy", "Adult ADHD assessments", "Work with teams and organisations"],
+      "worksWith": "Children, young people and adults",
+      "testimonial": {
+        "quote": "Sheena has been very helpful and helped me to regain my confidence… I felt finally able to talk about it all and learned great skills to manage my anxiety.",
+        "client": "Hasmit"
+      }
+    },
+    {
+      "id": "sanchia-biswas",
+      "firstName": "Sanchia",
+      "name": "Dr Sanchia Biswas",
+      "title": "Clinical Psychologist",
+      "hcpcNumber": "PYL[000000]",
+      "image": {
+        "src": "/images/team/dr-sanchia-biswas-clinical-psychologist.webp",
+        "thumbnail": "/images/team/dr-sanchia-biswas-clinical-psychologist-thumbnail.webp",
+        "alt": "Dr Sanchia Biswas, Clinical Psychologist, smiling and seated in a softly lit room",
+        "width": 900,
+        "height": 1100
+      },
+      "focus": "Health and counselling psychology",
+      "lead": "Working collaboratively with you to discover the fulfilment of living life by your values.",
+      "tags": ["EMDR", "Physical health", "Values-based", "All ages"],
+      "about": "Sanchia is a Clinical Psychologist working in Nottinghamshire. She has largely worked within adult mental health services in the NHS and is highly experienced with people of all ages and their families. Alongside common mental health difficulties, she particularly specialises in adult mental health in the context of physical health, which is also the focus of her research interests.",
+      "qualifications": [
+        "Doctorate in Clinical Psychology (DClinPsy)",
+        "MSc Health Psychology",
+        "MSc Counselling Psychology",
+        "BSc (Hons) Psychology"
+      ],
+      "specialisms": ["Mental health alongside physical illness", "Anxiety, low mood and self-doubt", "Trauma (EMDR)"],
+      "offers": ["Individual therapy", "Family work", "EMDR"],
+      "worksWith": "People of all ages, and their families",
+      "testimonial": {
+        "quote": "I immediately felt safe to explore my memories with Sanchia… the EMDR itself has honestly been incredible for me personally, removing much anxiety, doubt and trauma.",
+        "client": "Laura"
+      }
+    },
+    {
+      "id": "harry-ager",
+      "firstName": "Harry",
+      "name": "Dr Harry Ager",
+      "title": "Clinical Psychologist",
+      "hcpcNumber": "PYL[000000]",
+      "image": {
+        "src": "/images/team/dr-harry-ager-clinical-psychologist.webp",
+        "thumbnail": "/images/team/dr-harry-ager-clinical-psychologist-thumbnail.webp",
+        "alt": "Dr Harry Ager, Clinical Psychologist, smiling in a shirt and jacket",
+        "width": 900,
+        "height": 1100
+      },
+      "focus": "Forensic and rehabilitation · Personal trainer",
+      "lead": "Bringing exercise and nutrition into therapy to support your mental wellbeing as a whole.",
+      "tags": ["EMDR", "Substance use", "Psychosis", "Neurodiversity"],
+      "about": "Harry is a Clinical Psychologist with extensive NHS and private sector experience in adult mental health, forensic and rehabilitation settings. He works with people across the lifespan with common mental health difficulties, including neurodivergent people, and particularly specialises in substance misuse and psychosis. As a qualified personal trainer, he can integrate exercise and nutrition into your therapy.",
+      "qualifications": [
+        "Doctorate in Clinical Psychology (DClinPsy)",
+        "MSc Forensic Psychology",
+        "BSc (Hons) Psychology with Criminology",
+        "Qualified Personal Trainer"
+      ],
+      "specialisms": ["Substance misuse", "Psychosis", "Neurodiversity", "Trauma (EMDR)"],
+      "offers": ["Individual therapy", "EMDR", "Exercise and nutrition-informed therapy"],
+      "worksWith": "People across the lifespan",
+      "testimonial": {
+        "quote": "I was slightly apprehensive of the unknown before my first appointment, but I was put completely at ease within minutes… I look back now and realise the dramatic improvement this has made to my quality of life.",
+        "client": "Jai"
+      }
+    }
+  ]
+}

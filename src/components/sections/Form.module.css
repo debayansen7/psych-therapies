@@ -1,0 +1,46 @@
+.form {
+  flex: 999 1 460px;
+  min-width: 0;
+  background: #fff;
+  border-radius: 28px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 50px rgba(178, 58, 94, 0.1);
+}
+.form:focus {
+  outline: none;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.error {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--color-error, #b42318);
+  font-weight: 500;
+}
+
+.small {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--pt-muted);
+}
+
+.submit {
+  align-self: flex-start;
+  border-radius: 999px !important;
+}
+
+@media (max-width: 760px) {
+  .form {
+    padding: 22px;
+  }
+}
