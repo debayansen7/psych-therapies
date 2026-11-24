@@ -12,6 +12,7 @@ import { HelpSection } from "../sections/HelpSection";
 import { StoriesSection } from "../sections/StoriesSection";
 import { StartSection } from "../sections/StartSection";
 import { ProfileModal } from "../sections/ProfileModal";
+import { SiteFooter } from "../SiteFooter";
 import styles from "./Experience.module.css";
 
 const SECTION_COUNT = site.sections.length;
@@ -162,6 +163,8 @@ export function HomeExperience() {
       </main>
 
       <SectionRail index={index} onNavigate={goTo} />
+
+      <SiteFooter overlay />
 
       <ProfileModal
         psychologist={profile}

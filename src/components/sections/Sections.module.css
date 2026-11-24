@@ -252,13 +252,6 @@
   font-size: 14px;
   color: var(--pt-muted);
 }
-.storyBy img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 20%;
-}
 .storyBy strong {
   color: var(--pt-ink);
   font-weight: 600;

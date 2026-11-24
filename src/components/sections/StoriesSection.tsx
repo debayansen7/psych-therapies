@@ -19,10 +19,8 @@ export function StoriesSection() {
               <p style={{ margin: 0 }}>{p.testimonial.quote}</p>
             </blockquote>
             <figcaption className={s.storyBy}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.image.thumbnail} alt="" width={40} height={40} loading="lazy" decoding="async" />
               <span>
-                <strong>{p.testimonial.client}</strong> · with {p.name}
+                <strong>{p.testimonial.client}</strong> · with {p.firstName}
               </span>
             </figcaption>
           </figure>

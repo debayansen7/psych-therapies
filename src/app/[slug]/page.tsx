@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { legalPages, legalSlugs, site, type LegalSlug } from "@/content";
+import { SiteFooter } from "@/components/SiteFooter";
 import styles from "./legal.module.css";
 
 export const dynamicParams = false;
@@ -56,6 +57,7 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
           ))}
         </nav>
       </footer>
+      <SiteFooter />
     </div>
   );
 }

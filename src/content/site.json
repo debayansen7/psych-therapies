@@ -96,6 +96,7 @@
     }
   },
   "footer": {
+    "credit": "© 2026 All rights reserved. Designed and built by Debayan Sen",
     "links": [
       { "href": "/privacy-notice/", "label": "Privacy notice" },
       { "href": "/complaints/", "label": "Complaints" },
