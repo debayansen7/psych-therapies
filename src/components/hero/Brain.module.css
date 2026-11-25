@@ -25,19 +25,19 @@
   stroke-linejoin: round;
 }
 .outline {
-  stroke: #d98ba0;
+  stroke: #d4a06c;
   stroke-width: 2.6;
 }
 .folia {
-  stroke: #de97ab;
+  stroke: #dcae7f;
   stroke-width: 1.8;
 }
 .major {
-  stroke: #db8fa4;
+  stroke: #d8a673;
   stroke-width: 2;
 }
 .minor {
-  stroke: #e2a0b2;
+  stroke: #e4b88a;
   stroke-width: 1.6;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .nodes {
-  fill: #c2557a;
+  fill: #3b8ca5;
 }
 .node {
   opacity: 0;

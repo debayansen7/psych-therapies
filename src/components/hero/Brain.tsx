@@ -24,20 +24,20 @@ export function Brain() {
     >
       <defs>
         <radialGradient id="ptBrainFill" cx="40%" cy="32%" r="75%">
-          <stop offset="0%" stopColor="#FFEAF0" />
-          <stop offset="100%" stopColor="#F6C0CE" />
+          <stop offset="0%" stopColor="#FFF4E6" />
+          <stop offset="100%" stopColor="#FFD5AA" />
         </radialGradient>
         <radialGradient id="ptHalo" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#F8B6C8" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#F8B6C8" stopOpacity="0" />
+          <stop offset="0%" stopColor="#FFC17F" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#FFC17F" stopOpacity="0" />
         </radialGradient>
       </defs>
 
       <ellipse className={styles.halo} cx="225" cy="165" rx="230" ry="190" fill="url(#ptHalo)" />
 
       <g className={styles.fills}>
-        <path d={BRAIN_STEM} fill="#F3B8C6" />
-        <path d={CEREBELLUM} fill="#F7C3CF" />
+        <path d={BRAIN_STEM} fill="#F5C99A" />
+        <path d={CEREBELLUM} fill="#FFDDB8" />
         <path d={CEREBRUM} fill="url(#ptBrainFill)" />
       </g>
 

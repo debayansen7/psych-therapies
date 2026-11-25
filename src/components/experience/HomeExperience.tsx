@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { site, team } from "@/content";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { Header } from "./Header";
@@ -15,19 +15,15 @@ import { ProfileModal } from "../sections/ProfileModal";
 import { SiteFooter } from "../SiteFooter";
 import styles from "./Experience.module.css";
 
-const SECTION_COUNT = site.sections.length;
 const START_INDEX = site.sections.findIndex((s) => s.id === "start");
 
 /**
- * The horizontal, "revolving" home page.
- *
- * Scroll position is written to the `--p` CSS variable on the root (no React
- * re-render per frame); CSS derives the 3D revolve and parallax from it.
- * React state only changes when the current section index changes.
+ * The home page: all sections stacked vertically on one scrolling page.
+ * The current section (for the header and number rail) is tracked with an
+ * IntersectionObserver; navigation scrolls the section into view.
  */
 export function HomeExperience() {
-  const rootRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLElement>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const [index, setIndex] = useState(0);
   const [still, setStill] = useState(false);
   const [openProfile, setOpenProfile] = useState<string | null>(null);
@@ -37,66 +33,28 @@ export function HomeExperience() {
 
   const goTo = useCallback(
     (i: number) => {
-      const track = trackRef.current;
-      if (!track) return;
-      const k = Math.max(0, Math.min(SECTION_COUNT - 1, i));
-      track.scrollTo({ left: k * track.clientWidth, behavior: motionOff ? "auto" : "smooth" });
+      const k = Math.max(0, Math.min(sectionRefs.current.length - 1, i));
+      sectionRefs.current[k]?.scrollIntoView({ behavior: motionOff ? "auto" : "smooth", block: "start" });
     },
     [motionOff],
   );
 
-  // Scroll → CSS variable + current index.
+  // Current section = the one crossing a line 40% down the viewport.
   useEffect(() => {
-    const track = trackRef.current;
-    const root = rootRef.current;
-    if (!track || !root) return;
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const w = track.clientWidth || 1;
-      const p = track.scrollLeft / w;
-      root.style.setProperty("--p", p.toFixed(4));
-      setIndex(Math.round(p));
-    };
-    const onScroll = () => {
-      if (!frame) frame = requestAnimationFrame(update);
-    };
-    update();
-    track.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      track.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (frame) cancelAnimationFrame(frame);
-    };
+    const sections = sectionRefs.current.filter((el): el is HTMLElement => el !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setIndex(sections.indexOf(entry.target as HTMLElement));
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -60% 0px" },
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
-
-  // Vertical wheel → one section sideways, unless the section itself can still scroll.
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    let locked = false;
-    let timer: ReturnType<typeof setTimeout> | undefined;
-    const onWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return;
-      const panel = (e.target as Element | null)?.closest?.("[data-panel]") as HTMLElement | null;
-      if (panel && panel.scrollHeight > panel.clientHeight + 2) {
-        if (e.deltaY > 0 && panel.scrollTop + panel.clientHeight < panel.scrollHeight - 2) return;
-        if (e.deltaY < 0 && panel.scrollTop > 2) return;
-      }
-      e.preventDefault();
-      if (locked || Math.abs(e.deltaY) < 4) return;
-      locked = true;
-      timer = setTimeout(() => (locked = false), 800);
-      const current = Math.round(track.scrollLeft / (track.clientWidth || 1));
-      goTo(current + (e.deltaY > 0 ? 1 : -1));
-    };
-    track.addEventListener("wheel", onWheel, { passive: false });
-    return () => {
-      track.removeEventListener("wheel", onWheel);
-      if (timer) clearTimeout(timer);
-    };
-  }, [goTo]);
 
   const bookWith = useCallback(
     (psychologistName?: string) => {
@@ -119,17 +77,15 @@ export function HomeExperience() {
   ];
 
   return (
-    <div ref={rootRef} className={`${styles.root} ${motionOff ? "is-still" : ""}`} style={{ "--p": 0 } as CSSProperties}>
-      <a className="skip-link" href="#start" onClick={(e) => { e.preventDefault(); goTo(START_INDEX); }}>
+    <div className={`${styles.root} ${motionOff ? "is-still" : ""}`}>
+      <a className="skip-link" href="#start">
         Skip to enquiry form
       </a>
 
-      <div className={styles.farLayer} aria-hidden="true">
-        <span className={`${styles.glow} ${styles.glowPink}`} style={{ left: "4%", top: "8%" }} />
-        <span className={`${styles.glow} ${styles.glowLilac}`} style={{ left: "70%", top: "50%" }} />
-        <span className={`${styles.glow} ${styles.glowMint}`} style={{ left: "150%", top: "10%" }} />
-        <span className={`${styles.glow} ${styles.glowPeach}`} style={{ left: "260%", top: "40%" }} />
-        <span className={`${styles.glow} ${styles.glowPink}`} style={{ left: "380%", top: "5%" }} />
+      <div className={styles.backdrop} aria-hidden="true">
+        <span className={`${styles.glow} ${styles.glowPeach}`} style={{ left: "-6%", top: "-4%" }} />
+        <span className={`${styles.glow} ${styles.glowAqua}`} style={{ left: "62%", top: "38%" }} />
+        <span className={`${styles.glow} ${styles.glowMint}`} style={{ left: "20%", top: "70%" }} />
       </div>
 
       <Header
@@ -140,31 +96,25 @@ export function HomeExperience() {
         onBook={() => bookWith()}
       />
 
-      <main
-        ref={trackRef}
-        className={styles.track}
-        tabIndex={0}
-        aria-label="Six sections, side by side. Use the arrow keys, swipe, or the section numbers to move between them."
-      >
+      <main className={styles.page}>
         {panels.map((panel, i) => (
           <section
             key={panel.id}
             id={panel.id}
-            data-panel=""
+            ref={(el) => {
+              sectionRefs.current[i] = el;
+            }}
             aria-label={panel.label}
-            aria-hidden={i !== index || undefined}
-            inert={i !== index}
-            className={styles.panel}
-            style={{ "--i": i } as CSSProperties}
+            className={`${styles.panel} ${i === 0 ? styles.first : ""}`}
           >
-            <div className={styles.revolve}>{panel.node}</div>
+            <div className={styles.inner}>{panel.node}</div>
           </section>
         ))}
       </main>
 
       <SectionRail index={index} onNavigate={goTo} />
 
-      <SiteFooter overlay />
+      <SiteFooter />
 
       <ProfileModal
         psychologist={profile}

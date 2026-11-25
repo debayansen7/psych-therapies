@@ -8,7 +8,7 @@
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   font-weight: 600;
 }
 
@@ -21,6 +21,7 @@
 }
 .title strong {
   font-weight: 600;
+  color: var(--pt-teal);
 }
 
 .lead {
@@ -28,11 +29,6 @@
   font-size: 18px;
   line-height: 1.7;
   color: var(--pt-muted);
-}
-
-/* Parallax helper: --shift is set inline; --i comes from the panel. */
-.parallax {
-  transform: translateX(calc((var(--i) - var(--p)) * var(--shift, 60px) * var(--parallax)));
 }
 
 .card {
@@ -61,6 +57,7 @@
 }
 .howTitle strong {
   font-weight: 600;
+  color: var(--pt-teal);
 }
 .stats {
   display: flex;
@@ -71,7 +68,7 @@
 .statValue {
   font-size: 44px;
   font-weight: 600;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   line-height: 1;
 }
 .statLabel {
@@ -147,17 +144,17 @@
   padding: 12px;
   border-radius: 28px;
   background: #fff;
-  box-shadow: 0 14px 40px rgba(178, 58, 94, 0.1);
+  box-shadow: 0 14px 40px rgba(62, 40, 22, 0.1);
   transition: box-shadow 0.3s;
 }
 .docCard:hover {
-  box-shadow: 0 18px 50px rgba(178, 58, 94, 0.18);
+  box-shadow: 0 18px 50px rgba(62, 40, 22, 0.18);
 }
 .docPhoto {
   height: clamp(200px, calc(100dvh - 430px), 420px);
   overflow: hidden;
   border-radius: 20px;
-  background: var(--pt-pink-soft);
+  background: var(--pt-tint);
 }
 .docPhoto img {
   width: 100%;
@@ -181,7 +178,7 @@
 .docFocus {
   margin: 4px 0 0;
   font-size: 14px;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   font-weight: 600;
 }
 .docMore {
@@ -294,7 +291,7 @@
 }
 .crisis {
   background: #fff;
-  border: 1px solid var(--pt-pink-line);
+  border: 1px solid var(--pt-line);
   border-radius: 18px;
   padding: 16px 18px;
   font-size: 14px;

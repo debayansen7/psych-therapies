@@ -45,7 +45,7 @@
   bottom: 0;
   margin: 0;
   padding: 28px 24px 22px;
-  background: linear-gradient(transparent, rgba(43, 34, 48, 0.78));
+  background: linear-gradient(transparent, rgba(51, 51, 51, 0.78));
   color: #fff;
   font-size: 13px;
   letter-spacing: 0.18em;
@@ -58,7 +58,7 @@
   letter-spacing: 0.04em;
   text-transform: none;
   font-weight: 400;
-  color: #fde8ee;
+  color: #fff1e2;
 }
 
 .body {
@@ -86,8 +86,8 @@
   gap: 8px;
 }
 .tags li {
-  background: var(--pt-pink);
-  color: var(--pt-rose-deep);
+  background: var(--pt-peach);
+  color: var(--pt-accent-deep);
   font-size: 13px;
   font-weight: 600;
   padding: 8px 14px;
@@ -99,7 +99,7 @@
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   font-weight: 600;
 }
 
@@ -126,7 +126,7 @@
 
 .quote {
   margin: 0;
-  background: #fff4f6;
+  background: #fffbf1;
   border-radius: 22px;
   padding: 24px 26px;
 }

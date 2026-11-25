@@ -12,7 +12,7 @@
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   font-weight: 600;
 }
 
@@ -26,12 +26,13 @@
 }
 .title strong {
   font-weight: 600;
+  color: var(--pt-teal);
 }
 
 .ring {
   position: relative;
   max-width: 1240px;
-  height: calc(100dvh - 290px);
+  height: calc(100svh - 290px);
   min-height: 420px;
   margin: 10px auto 0;
 }
@@ -52,11 +53,11 @@
   transition: stroke 0.25s;
 }
 .line {
-  stroke: #edb5c5;
+  stroke: #e4bf8f;
   stroke-width: 1.2;
 }
 .lineActive {
-  stroke: var(--pt-rose);
+  stroke: var(--pt-accent);
   stroke-width: 2;
 }
 
@@ -95,22 +96,22 @@
   padding: 11px 20px;
   min-height: 44px;
   border-radius: 999px;
-  border: 1px solid var(--pt-pink-line);
+  border: 1px solid var(--pt-line);
   background: #fff;
   color: var(--pt-ink);
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(178, 58, 94, 0.08);
+  box-shadow: 0 6px 18px rgba(62, 40, 22, 0.08);
   transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 .chipButton:hover {
-  border-color: var(--pt-rose);
+  border-color: var(--pt-accent);
 }
 .chipButton[aria-expanded="true"] {
-  background: var(--pt-rose);
-  border-color: var(--pt-rose);
+  background: var(--pt-accent);
+  border-color: var(--pt-accent);
   color: #fff;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(178, 58, 94, 0.35);
+  box-shadow: 0 10px 30px rgba(62, 40, 22, 0.35);
 }
 
 .cardSlot {
@@ -130,10 +131,10 @@
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--pt-pink-line);
+  border: 1px solid var(--pt-line);
   border-radius: 24px;
   padding: 24px 26px;
-  box-shadow: 0 20px 50px rgba(178, 58, 94, 0.16);
+  box-shadow: 0 20px 50px rgba(62, 40, 22, 0.16);
   animation: pt-card-in 0.28s ease both;
 }
 
@@ -149,7 +150,7 @@
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--pt-rose);
+  color: var(--pt-accent);
   font-weight: 600;
 }
 .kickerGreen {

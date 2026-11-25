@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { site, team } from "@/content";
 import s from "./Sections.module.css";
 
@@ -22,8 +21,8 @@ export function TeamSection({ onOpen }: TeamSectionProps) {
         </p>
       </div>
       <ul className={s.teamGrid}>
-        {team.map((p, i) => (
-          <li key={p.id} className={s.parallax} style={{ "--shift": `${40 + i * 60}px` } as CSSProperties}>
+        {team.map((p) => (
+          <li key={p.id}>
             <button type="button" className={s.docCard} onClick={() => onOpen(p.id)} aria-haspopup="dialog">
               <div className={s.docPhoto}>
                 {/* Static export: images are pre-optimised WebP files in /public/images. */}

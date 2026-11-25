@@ -3,21 +3,26 @@
    Selector specificity beats anexui's own [data-theme="light"].
 ---------------------------------------------------------------- */
 :root[data-theme="light"] {
-  --pt-bg: #fff8f6;
-  --pt-ink: #2b2230;
-  --pt-ink-soft: #4a3f48;
-  --pt-muted: #6b5f68;
-  --pt-rose: #b23a5e;
-  --pt-rose-deep: #8e2c4a;
-  --pt-pink: #fad3dc;
-  --pt-pink-line: #f0c6d2;
-  --pt-pink-soft: #f6e3e9;
-  --pt-lilac: #e4daf5;
-  --pt-mint: #d3eee4;
-  --pt-peach: #fde3d2;
-  --pt-green-text: #2e7d68;
-  --pt-border: #f0dde3;
-  --pt-shadow: 0 10px 30px rgba(178, 58, 94, 0.08);
+  /* Palette taken from psych-therapies.com: cream, peach, tan/copper, teal, charcoal. */
+  --pt-bg: #fffbf1; /* cream */
+  --pt-ink: #333333; /* charcoal text */
+  --pt-ink-soft: #4d4d4d;
+  --pt-muted: #666666;
+  --pt-accent: #275d6e; /* deep teal: buttons, links, focus (7:1 on white) */
+  --pt-accent-deep: #1b4553;
+  --pt-teal: #3b8ca5; /* site heading teal: large text only */
+  --pt-copper: #c17f42; /* logo ring: decoration only */
+  --pt-tan: #e4bf8f;
+  --pt-peach: #ffd5aa; /* site nav bar */
+  --pt-line: #f3d9bc;
+  --pt-tint: #fff1e2;
+  --pt-aqua: #c4f7f7;
+  --pt-mint: #b4fad8;
+  --pt-butter: #ffebaa;
+  --pt-blush: #fadcd6;
+  --pt-green-text: #1d6b55;
+  --pt-border: #efe2cf;
+  --pt-shadow: 0 10px 30px rgba(62, 40, 22, 0.08);
 
   --font-sans: "Sora Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
   --color-text: var(--pt-ink);
@@ -25,29 +30,21 @@
   --color-label: var(--pt-ink);
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
-  --color-primary: var(--pt-rose);
-  --color-primary-hover: var(--pt-rose-deep);
-  --color-primary-active: #7a2440;
+  --color-primary: var(--pt-accent);
+  --color-primary-hover: var(--pt-accent-deep);
+  --color-primary-active: #132e37;
   --color-primary-foreground: #ffffff;
-  --color-primary-subtle: var(--pt-pink-soft);
-  --color-border: #e6d4db;
-  --color-border-focus: var(--pt-rose);
+  --color-primary-subtle: var(--pt-tint);
+  --color-border: #e8d9c4;
+  --color-border-focus: var(--pt-accent);
   --color-input-background: var(--pt-bg);
-  --color-input-border: #e6d4db;
-  --color-input-border-hover: #d9b3c0;
-  --color-input-border-focus: var(--pt-rose);
-  --color-overlay: rgba(43, 34, 48, 0.36);
-
-  /* Motion levers, switched off by .is-still and reduced-motion. */
-  --revolve: 1;
-  --parallax: 1;
+  --color-input-border: #e8d9c4;
+  --color-input-border-hover: #d8bf9c;
+  --color-input-border-focus: var(--pt-accent);
+  --color-overlay: rgba(51, 51, 51, 0.36);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :root[data-theme="light"] {
-    --revolve: 0;
-    --parallax: 0;
-  }
   *,
   *::before,
   *::after {
@@ -59,10 +56,6 @@
   }
 }
 
-.is-still {
-  --revolve: 0;
-  --parallax: 0;
-}
 .is-still *,
 .is-still *::before,
 .is-still *::after {
@@ -82,6 +75,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -93,14 +90,14 @@ body {
 }
 
 a {
-  color: var(--pt-rose);
+  color: var(--pt-accent);
 }
 a:hover {
   color: var(--pt-ink);
 }
 
 :focus-visible {
-  outline: 3px solid var(--pt-rose);
+  outline: 3px solid var(--pt-accent);
   outline-offset: 3px;
 }
 

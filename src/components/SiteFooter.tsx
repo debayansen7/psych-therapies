@@ -1,10 +1,10 @@
 import { site } from "@/content";
 import s from "./SiteFooter.module.css";
 
-/** Transparent credit bar. `overlay` pins it to the bottom of the home viewport. */
-export function SiteFooter({ overlay = false }: { overlay?: boolean }) {
+/** Transparent credit bar at the foot of the page. */
+export function SiteFooter() {
   return (
-    <footer className={`${s.footer} ${overlay ? s.overlay : ""}`}>
+    <footer className={s.footer}>
       <p>{site.footer.credit}</p>
     </footer>
   );
