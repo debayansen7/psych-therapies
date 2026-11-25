@@ -1,11 +1,10 @@
-import type { CSSProperties } from "react";
 import { site } from "@/content";
 import s from "./Sections.module.css";
 
 const STEP_COLOURS = [
-  { background: "var(--pt-pink)", color: "#8E2C4A" },
-  { background: "var(--pt-lilac)", color: "#4E3A7A" },
-  { background: "var(--pt-mint)", color: "#1F5E4E" },
+  { background: "var(--pt-blush)", color: "#7A3B2E" },
+  { background: "var(--pt-butter)", color: "#6B5200" },
+  { background: "var(--pt-mint)", color: "#1D5E45" },
 ];
 
 export function HowItWorks() {
@@ -36,8 +35,7 @@ export function HowItWorks() {
         {how.steps.map((step, i) => (
           <li
             key={step.title}
-            className={`${s.card} ${s.step} ${s.parallax}`}
-            style={{ "--shift": `${80 + i * 70}px` } as CSSProperties}
+            className={`${s.card} ${s.step}`}
           >
             <span className={s.stepNum} style={STEP_COLOURS[i % STEP_COLOURS.length]} aria-hidden="true">
               {i + 1}

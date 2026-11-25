@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   background: transparent;
   padding: 12px 24px;
   text-align: center;
@@ -10,16 +11,6 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--pt-muted);
-}
-
-/* Home page: sits over the bottom of the horizontal track. */
-.overlay {
-  position: absolute;
-  z-index: 30;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
 }
 
 @media (max-width: 760px) {

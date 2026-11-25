@@ -1,8 +1,7 @@
-import type { CSSProperties } from "react";
 import { site } from "@/content";
 import s from "./Sections.module.css";
 
-const TINTS = ["var(--pt-pink)", "var(--pt-lilac)", "var(--pt-mint)", "var(--pt-peach)"];
+const TINTS = ["var(--pt-peach)", "var(--pt-aqua)", "var(--pt-mint)", "var(--pt-butter)", "var(--pt-blush)"];
 
 export function HelpSection() {
   const { help } = site;
@@ -25,8 +24,8 @@ export function HelpSection() {
         {help.approaches.map((a, i) => (
           <li
             key={a}
-            className={`${s.approach} ${s.parallax}`}
-            style={{ background: TINTS[i % TINTS.length], "--shift": `${30 + (i % 5) * 40}px` } as CSSProperties}
+            className={s.approach}
+            style={{ background: TINTS[i % TINTS.length] }}
           >
             {a}
           </li>
